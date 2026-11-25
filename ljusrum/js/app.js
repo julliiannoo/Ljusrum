@@ -28,7 +28,7 @@ function pageHead(title) {
   return `<h1 class="page-title" tabindex="-1">${title}</h1><hr class="divider">`;
 }
 const dateList = () =>
-  LJUSRUM.sessions.map((s) => `<li>${s.label}, <span class="nowrap">${W.time}</span></li>`).join('');
+  LJUSRUM.sessions.map((s) => `<li>${s.label} <span class="date-list__time nowrap">${W.time}</span></li>`).join('');
 
 /* ---------- Vyer ---------- */
 const views = {
