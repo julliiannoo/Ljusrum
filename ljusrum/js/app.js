@@ -43,7 +43,7 @@ const views = {
             <div class="hero__head">
               <div>
                 <h1 class="hero__title" tabindex="-1">Ta kontroll över din kamera</h1>
-                <p class="hero__sub">– En fotokurs för nybörjare i Stockholm</p>
+                <p class="hero__sub">En fotokurs för nybörjare i Stockholm</p>
               </div>
               <img class="hero__map" src="images/karta.png" alt="" width="114" height="78">
             </div>
