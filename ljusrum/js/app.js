@@ -41,13 +41,9 @@ const views = {
         <div class="hero">
           <div class="hero__text">
             <div class="hero__head">
-              <div>
-                <h1 class="hero__title" tabindex="-1">Ta kontroll över <br class="br-desktop">din kamera</h1>
-                <p class="hero__sub">En fotokurs för nybörjare i Stockholm</p>
-              </div>
-              <img class="hero__map" src="images/karta.png" alt="" width="114" height="78">
+              <h1 class="hero__title" tabindex="-1">Ta kontroll över <br class="br-desktop">din kamera</h1>
+              <p class="hero__sub">En fotokurs för nybörjare i Stockholm</p>
             </div>
-            <p class="hero__facts">Lördagar i november · <span class="nowrap">kl. 10–15</span> · <span class="nowrap">1 200 kr</span> · <span class="nowrap">max 10 deltagare</span></p>
             <a class="btn hero__cta-desktop" href="#/boka">Välj tid och boka</a>
           </div>
           <img class="hero__img" src="images/hero.jpg" alt="Person som håller upp en systemkamera framför ansiktet" width="1206" height="639">
