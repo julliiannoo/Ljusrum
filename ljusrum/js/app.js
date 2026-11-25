@@ -271,18 +271,18 @@ const views = {
         <p>Kontrollera att allt stämmer innan du bekräftar.</p>
         <section class="card review-card" aria-labelledby="h-ws">
           <div class="card__head"><h2 id="h-ws">Workshop</h2><a class="text-link" href="#/boka">Ändra tid</a></div>
-          <dl class="facts">
-            <dt>Kurs:</dt><dd>${W.title}</dd>
-            <dt>Tid:</dt><dd>${s.label}, <span class="nowrap">${W.time}</span></dd>
-            <dt>Plats:</dt><dd>${W.placeShort}, Stockholm</dd>
-            <dt>Pris:</dt><dd>${formatPrice(W.price)} inkl. moms</dd>
+          <dl class="facts facts--values">
+            <dt>Kurs</dt><dd>${W.title}</dd>
+            <dt>Tid</dt><dd>${s.label}, <span class="nowrap">${W.time}</span></dd>
+            <dt>Plats</dt><dd>${W.placeShort}, Stockholm</dd>
+            <dt>Pris</dt><dd>${formatPrice(W.price)} inkl. moms</dd>
           </dl>
         </section>
         <section class="card review-card" aria-labelledby="h-du">
           <div class="card__head"><h2 id="h-du">Dina uppgifter</h2><a class="text-link" href="#/uppgifter">Ändra</a></div>
-          <dl class="facts">
-            <dt>Namn:</dt><dd>${esc(d.name)}</dd>
-            <dt>E-post:</dt><dd>${esc(d.email)}</dd>
+          <dl class="facts facts--values">
+            <dt>Namn</dt><dd>${esc(d.name)}</dd>
+            <dt>E-post</dt><dd>${esc(d.email)}</dd>
           </dl>
         </section>
         <p>Ingen betalning sker nu. Fakturan skickas till din e-post efter bokningen.</p>
