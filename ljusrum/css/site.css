@@ -23,7 +23,6 @@
   .hero__title { font-size: 44px; }
   .hero__sub { font-size: 20px; }
   .hero__img { aspect-ratio: 3 / 2; }
-  .hero .btn { max-width: 360px; }
   .hero__cta-mobile { display: none; }
 }
 @media (max-width: 1023px) {
@@ -60,7 +59,6 @@
 .date-list li + li { margin-top: 8px; }
 
 .section .btn { margin-top: var(--s3); }
-@media (min-width: 1024px) { .section .btn { max-width: 360px; } }
 
 .footer-wrap { border-top: 1px solid var(--wine); padding-top: var(--s3); }
 
