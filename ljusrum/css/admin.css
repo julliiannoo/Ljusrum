@@ -77,23 +77,20 @@
 .table { width: 100%; border-collapse: collapse; }
 .table th { text-align: left; font-weight: 600; padding: 10px 12px 10px 0; white-space: nowrap; }
 .table td { padding: 12px 12px 12px 0; border-top: 1px solid var(--bg); vertical-align: middle; }
-.table th:last-child, .table td:last-child { text-align: right; padding-right: 0; width: 64px; }
+.table th:last-child, .table td:last-child { text-align: right; padding-right: 0; width: 1%; white-space: nowrap; }
 .table .col-id { width: 140px; }
 @media (min-width: 1024px) { .table th, .table td { font-size: 20px; } .table .col-id { width: 25%; } .table .col-namn { width: 30%; } }
 
-.round-btn {
-  display: inline-grid; place-items: center; width: 44px; height: 44px;
-  border: 1px solid var(--ink); border-radius: 50%;
-  color: var(--ink); text-decoration: none; font-size: 18px;
-}
-.round-btn:hover { background: var(--bg); }
+/* "Visa bokning" – textlänk i samma stil som "Läs mer om kursen" */
+.row-link { font-size: 16px; color: var(--ink); }
+.row-link:hover { text-decoration-thickness: 2px; }
 
 /* Mobil: tabellen visas som en lista med kort */
 @media (max-width: 599px) {
   .table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .table, .table tbody, .table tr, .table td { display: block; width: 100%; }
   .table tr {
-    position: relative; padding: 12px 56px 12px 0; border-top: 1px solid var(--bg);
+    position: relative; padding: 12px 0 4px; border-top: 1px solid var(--bg);
   }
   .table td { padding: 0; border: 0; }
   .table .col-namn { font-weight: 600; }
@@ -101,7 +98,7 @@
   .table .col-id::before { content: 'Bokning '; }
   .table tr { display: flex; flex-direction: column; }
   .table .col-namn { order: 1; } .table .col-epost { order: 2; font-size: 14px; word-break: break-all; }
-  .table td:last-child { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: auto; }
+  .table td:last-child { order: 4; text-align: left; width: auto; }
 }
 
 .empty { padding: 16px 0; }

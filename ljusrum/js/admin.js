@@ -70,14 +70,14 @@ function overview(state) {
     if (!shown.length) { rowsEl.innerHTML = `<p class="empty" role="status">Inga deltagare matchar ”${esc(q)}”.</p>`; return; }
     rowsEl.innerHTML = `
       <table class="table">
-        <thead><tr><th class="col-id" scope="col">Boknings-ID</th><th class="col-namn" scope="col">Namn</th><th class="col-epost" scope="col">E-post</th><th scope="col">Visa</th></tr></thead>
+        <thead><tr><th class="col-id" scope="col">Boknings-ID</th><th class="col-namn" scope="col">Namn</th><th class="col-epost" scope="col">E-post</th><th class="col-visa" scope="col"><span class="visually-hidden">Länk</span></th></tr></thead>
         <tbody>
           ${shown.map((b) => `
             <tr>
               <td class="col-id">${b.id}</td>
               <td class="col-namn">${esc(b.name)}</td>
               <td class="col-epost">${esc(b.email)}</td>
-              <td><a class="round-btn" href="${link({ session: state.session, booking: b.id })}" aria-label="Visa bokning ${b.id}, ${esc(b.name)}">&gt;</a></td>
+              <td class="col-visa"><a class="text-link row-link" href="${link({ session: state.session, booking: b.id })}" aria-label="Visa bokning ${b.id}, ${esc(b.name)}">Visa bokning</a></td>
             </tr>`).join('')}
         </tbody>
       </table>`;
