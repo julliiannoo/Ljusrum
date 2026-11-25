@@ -34,7 +34,7 @@ function overview(state) {
   main.innerHTML = `
     <div>
       <p class="eyebrow">Bokningsöversikt</p>
-      <h1 class="admin-title" tabindex="-1">Fotoworkshop: ${WS.title}</h1>
+      <h1 class="admin-title" tabindex="-1">${WS.title}</h1>
     </div>
 
     <div class="session-picker">
@@ -70,7 +70,7 @@ function overview(state) {
     if (!shown.length) { rowsEl.innerHTML = `<p class="empty" role="status">Inga deltagare matchar ”${esc(q)}”.</p>`; return; }
     rowsEl.innerHTML = `
       <table class="table">
-        <thead><tr><th class="col-id" scope="col">Boknings-ID</th><th class="col-namn" scope="col">Namn</th><th class="col-epost" scope="col">E-post</th><th class="col-visa" scope="col"><span class="visually-hidden">Länk</span></th></tr></thead>
+        <thead><tr><th class="col-id" scope="col">Bokning</th><th class="col-namn" scope="col">Namn</th><th class="col-epost" scope="col">E-post</th><th class="col-visa" scope="col"><span class="visually-hidden">Länk</span></th></tr></thead>
         <tbody>
           ${shown.map((b) => `
             <tr>
@@ -107,12 +107,12 @@ function detail(state) {
         <p class="detail__name">${esc(b.name)}</p>
         <p class="detail__mail"><a href="mailto:${esc(b.email)}">${esc(b.email)}</a></p>
       </div>
-      <dl class="facts">
-        <dt>Workshop</dt><dd>${WS.title}</dd>
-        <dt>Datum</dt><dd>${s.short}</dd>
-        <dt>Tid</dt><dd>10:00–15:00</dd>
-        <dt>Plats</dt><dd>${WS.placeShort}</dd>
-        <dt>Pris</dt><dd>${formatPrice(WS.price)}</dd>
+      <dl class="facts facts--values">
+        <dt>Kurs</dt><dd>${WS.title}</dd>
+        <dt>Datum</dt><dd>${s.label}</dd>
+        <dt>Tid</dt><dd>${WS.timeLabel}</dd>
+        <dt>Plats</dt><dd>${WS.place}</dd>
+        <dt>Pris</dt><dd>${formatPrice(WS.price)} inkl. moms</dd>
         <dt>Status</dt><dd><span class="status"><span aria-hidden="true">✓</span> ${b.status}</span></dd>
       </dl>
     </section>

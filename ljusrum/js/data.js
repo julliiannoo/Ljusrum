@@ -9,7 +9,8 @@ const LJUSRUM = {
     title: 'Ta kontroll över din kamera',
     price: 1200,
     capacity: 10,
-    time: 'kl. 10–15',
+    time: 'kl. 10–15',        // efter ett datum: "Lördag 14 november 2026 kl. 10–15"
+    timeLabel: 'Kl. 10–15',   // som eget värde under etiketten Tid
     place: 'Ljusrum fotostudio på Södermalm, Stockholm',
     placeShort: 'Ljusrum fotostudio, Södermalm',
   },

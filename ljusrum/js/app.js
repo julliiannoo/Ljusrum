@@ -16,9 +16,9 @@ const setDraft = (patch) => safeWrite(sessionStorage, DRAFT_KEY, { ...getDraft()
 function footer() {
   return `
     <footer class="site-footer footer-wrap">
-      <p>Plats: Ljusrum fotostudio på Södermalm</p>
-      <p>Telefon: <a href="tel:+46712345678">+46 71 234 56 78</a></p>
-      <p>E-post: <a href="mailto:fotoworkshop@hej.se">fotoworkshop@hej.se</a></p>
+      <p><span class="footer-label">Plats</span> <span>${W.place}</span></p>
+      <p><span class="footer-label">Telefon</span> <a href="tel:+46712345678">+46 71 234 56 78</a></p>
+      <p><span class="footer-label">E-post</span> <a href="mailto:fotoworkshop@hej.se">fotoworkshop@hej.se</a></p>
     </footer>`;
 }
 function backLink(href, text = '← Tillbaka') {
@@ -99,9 +99,9 @@ const views = {
           Dagen består av korta genomgångar och praktiska övningar, inne i studion och utomhus i närheten.
           Du övar på bländare, slutartid, ISO, fokus, ljus och komposition.</p>
           <dl class="facts facts--values" style="margin-top:16px">
-            <dt>Tid</dt><dd>Kl. 10–15</dd>
-            <dt>Plats</dt><dd>Ljusrum fotostudio på Södermalm, Stockholm, och utomhus i närheten</dd>
-            <dt>Pris</dt><dd>1 200 kr inkl. moms. Faktura skickas via e-post efter bokningen.</dd>
+            <dt>Tid</dt><dd>${W.timeLabel}</dd>
+            <dt>Plats</dt><dd>${W.place}, och utomhus i närheten</dd>
+            <dt>Pris</dt><dd>${formatPrice(W.price)} inkl. moms. <span class="fact-note">Faktura skickas via e-post efter bokningen.</span></dd>
             <dt>Grupp</dt><dd>Högst 10 deltagare</dd>
           </dl>
         </section>
@@ -147,7 +147,7 @@ const views = {
           <span class="option__radio" aria-hidden="true"></span>
           <span class="option__text">
             <span class="option__date">${s.label}</span>
-            <span class="option__info">${full ? 'Fullbokat' : `Kl. 10–15 · ${left} platser kvar`}</span>
+            <span class="option__info">${full ? 'Fullbokat' : `${W.timeLabel} · ${left} platser kvar`}</span>
           </span>
           <span class="option__badge" aria-hidden="true">✓ Vald</span>
         </label>`;
@@ -203,8 +203,8 @@ const views = {
         ${pageHead('Fyll i dina uppgifter')}
         <div>
           <h2>Din valda tid</h2>
-          <p style="margin-top:8px">${s.label}, <span class="nowrap">${W.time}</span></p>
-          <p>${W.placeShort} · ${formatPrice(W.price)} inkl. moms</p>
+          <p style="margin-top:8px">${s.label} <span class="date-list__time nowrap">${W.time}</span></p>
+          <p>${W.place} · ${formatPrice(W.price)} inkl. moms</p>
           <a class="text-link" href="#/boka">← Ändra tid</a>
         </div>
         <form id="details-form" class="stack" novalidate>
@@ -273,8 +273,9 @@ const views = {
           <div class="card__head"><h2 id="h-ws">Workshop</h2><a class="text-link" href="#/boka">Ändra tid</a></div>
           <dl class="facts facts--values">
             <dt>Kurs</dt><dd>${W.title}</dd>
-            <dt>Tid</dt><dd>${s.label}, <span class="nowrap">${W.time}</span></dd>
-            <dt>Plats</dt><dd>${W.placeShort}, Stockholm</dd>
+            <dt>Datum</dt><dd>${s.label}</dd>
+            <dt>Tid</dt><dd>${W.timeLabel}</dd>
+            <dt>Plats</dt><dd>${W.place}</dd>
             <dt>Pris</dt><dd>${formatPrice(W.price)} inkl. moms</dd>
           </dl>
         </section>
@@ -320,10 +321,11 @@ const views = {
         <dl class="facts facts--values">
           <dt>Bokning</dt><dd>${b.id}</dd>
           <dt>Namn</dt><dd>${esc(b.name)}</dd>
-          <dt>Datum</dt><dd>${s.label}, <span class="nowrap">${W.time}</span></dd>
+          <dt>Datum</dt><dd>${s.label}</dd>
+          <dt>Tid</dt><dd>${W.timeLabel}</dd>
           <dt>Plats</dt><dd>${W.place}</dd>
           <dt>Pris</dt><dd>${formatPrice(W.price)} inkl. moms</dd>
-          <dt>Faktura</dt><dd>${esc(b.email)}</dd>
+          <dt>E-post</dt><dd>${esc(b.email)}</dd>
         </dl>
         <section aria-labelledby="h-tamed">
           <h2 id="h-tamed">Ta med</h2>

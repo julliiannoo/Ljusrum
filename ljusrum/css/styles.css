@@ -26,7 +26,7 @@
   --disabled-text: #5f645f;
   --muted: #55635a;
   --line: rgba(74, 29, 32, 0.35);
-  --divider: rgba(74, 29, 32, 0.5); /* sidoavdelare: vinrött 50 % genomskinligt */
+  --divider: rgba(74, 29, 32, 0.25); /* sidoavdelare: vinrött, 25 % synligt */
 
   /* Form och avstånd */
   --radius: 8px;
@@ -100,7 +100,7 @@ a { color: inherit; }
   font-size: 24px; font-weight: 600; color: var(--ink); text-decoration: none;
 }
 .nav-link {
-  font-weight: 300; color: var(--ink); text-underline-offset: 3px;
+  font-weight: 400; color: var(--ink); text-underline-offset: 3px;
   padding: 12px 0; /* stor tryckyta */
 }
 
@@ -148,7 +148,7 @@ a { color: inherit; }
 .btn-secondary--full { width: 100%; }
 
 .text-link {
-  display: inline-block; font-weight: 300; color: var(--wine);
+  display: inline-block; font-weight: 400; color: var(--wine);
   text-underline-offset: 3px; padding: 10px 0;
 }
 
@@ -167,6 +167,7 @@ a { color: inherit; }
 /* Variant där uppgifterna framhävs och etiketterna tonas ner (t.ex. bokningsbekräftelsen) */
 .facts--values dt { font-weight: 300; }
 .facts--values dd { font-weight: 600; }
+.facts--values .fact-note { font-weight: 400; }
 
 .muted { color: var(--muted); }
 
@@ -178,3 +179,10 @@ a { color: inherit; }
 .site-footer { color: var(--red); }
 .site-footer p + p { margin-top: 8px; }
 .site-footer a { color: var(--red); }
+.footer-label { font-weight: 300; }
+/* Mobil: varje rad i sidfoten blir en 44 px hög tryckyta */
+@media (max-width: 599px) {
+  .site-footer p { padding: 10px 0; }
+  .site-footer p + p { margin-top: 0; }
+  .site-footer a { display: inline-block; padding: 10px 0; margin: -10px 0; }
+}
