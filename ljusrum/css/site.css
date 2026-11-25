@@ -6,6 +6,9 @@
 .hero { display: grid; gap: var(--s3); }
 .hero__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .hero__title { font-size: 32px; }
+/* Radbrytning före "din" bara på desktop */
+.br-desktop { display: none; }
+@media (min-width: 1024px) { .br-desktop { display: inline; } }
 .hero__sub { margin-top: var(--s1); }
 .hero__facts { margin-top: var(--s2); font-weight: 600; }
 @media (min-width: 1024px) { .hero__facts { margin-top: 0; } }
