@@ -1,0 +1,126 @@
+/* =========================================================
+   Hemsidan (/) – sidspecifika delar
+   ========================================================= */
+
+/* ---------- Startsida: hero ---------- */
+.hero { display: grid; gap: 24px; }
+.hero__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.hero__title { font-size: 32px; }
+.hero__sub { margin-top: 8px; }
+.hero__map { width: 114px; flex-shrink: 0; }
+.hero__img { width: 100%; aspect-ratio: 402 / 213; object-fit: cover; border-radius: 2px; }
+
+@media (min-width: 600px) {
+  .hero__title { font-size: 36px; }
+}
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr 480px; align-items: center; gap: 64px;
+    padding: 16px 0 24px;
+  }
+  .hero__text { display: grid; gap: 28px; align-content: center; }
+  .hero__title { font-size: 44px; }
+  .hero__sub { font-size: 20px; }
+  .hero__img { aspect-ratio: 3 / 2; }
+  .hero .btn { max-width: 360px; }
+  .hero__cta-mobile { display: none; }
+}
+@media (max-width: 1023px) {
+  .hero__cta-desktop { display: none; }
+}
+
+/* ---------- Startsida: sektioner ---------- */
+.section { padding: 24px 0; border-top: 3px solid var(--wine); }
+.section:first-of-type { margin-top: 24px; }
+.section h2 { margin-bottom: 16px; }
+
+.intro { max-width: 700px; }
+.intro__more { display: flex; justify-content: flex-end; margin-top: 12px; }
+
+.split {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;
+}
+.split img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.split--reverse .split__media { order: -1; }
+
+@media (min-width: 600px) {
+  .split { grid-template-columns: 1fr 320px; gap: 32px; }
+  .split--reverse { grid-template-columns: 320px 1fr; }
+}
+@media (min-width: 1024px) {
+  .split { grid-template-columns: 1fr 480px; gap: 64px; }
+  .split--reverse { grid-template-columns: 480px 1fr; }
+}
+
+.date-list { margin: 0; padding-left: 22px; }
+.date-list li + li { margin-top: 8px; }
+
+.section .btn { margin-top: 24px; }
+@media (min-width: 1024px) { .section .btn { max-width: 360px; } }
+
+.footer-wrap { border-top: 3px solid var(--wine); padding-top: 24px; margin-top: 8px; }
+
+/* ---------- Mer om kursen ---------- */
+.prose p + p { margin-top: 16px; }
+.wide-img { width: 100%; aspect-ratio: 402 / 213; object-fit: cover; }
+.check-list { margin: 0; padding-left: 0; list-style: none; }
+.check-list li::before { content: '• '; }
+
+/* ---------- Bokningsflöde ---------- */
+.step { font-size: 14px; color: var(--muted); text-align: center; margin-top: 6px; }
+
+/* Tidsval: riktiga radioknappar som ser ut som kort */
+.picker { border: 0; padding: 0; margin: 0; display: grid; gap: 12px; }
+.picker legend { font-size: 20px; font-weight: 600; margin-bottom: 12px; padding: 0; }
+
+.option {
+  position: relative; display: flex; align-items: center; gap: 14px;
+  padding: 14px 16px; min-height: 64px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  cursor: pointer;
+}
+.option input { position: absolute; opacity: 0; pointer-events: none; }
+.option__radio {
+  width: 22px; height: 22px; flex-shrink: 0; border-radius: 50%;
+  border: 2px solid var(--wine); background: var(--surface);
+  display: grid; place-items: center;
+}
+.option__text { flex: 1; display: grid; }
+.option__date { font-weight: 600; }
+.option__info { font-size: 16px; }
+.option__badge { font-weight: 600; display: none; }
+
+.option:hover { border-color: var(--wine); }
+.option:has(input:focus-visible) { outline: 3px solid var(--rose); outline-offset: 2px; }
+.option:has(input:checked) { background: var(--selected); border: 2px solid var(--wine); padding: 13px 15px; }
+.option:has(input:checked) .option__radio::after {
+  content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--wine);
+}
+.option:has(input:checked) .option__date { font-weight: 700; }
+.option:has(input:checked) .option__badge { display: inline; }
+.option.is-full { opacity: 0.6; cursor: not-allowed; }
+
+.selected-time { min-height: 52px; }
+.selected-time strong { display: block; font-size: 20px; }
+
+/* Formulär */
+.field { display: grid; gap: 8px; }
+.field label { font-weight: 600; }
+.field input {
+  width: 100%; min-height: 48px; padding: 10px 14px;
+  font: 16px var(--font); color: var(--wine);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.field input::placeholder { color: #6b6f6b; }
+.field input:focus { border: 2px solid var(--wine); padding: 9px 13px; outline: none; }
+.field input[aria-invalid='true'] { border: 2px solid var(--red); padding: 9px 13px; }
+.field__hint { font-size: 16px; }
+.field__error { color: var(--red); font-weight: 600; display: flex; gap: 6px; }
+.field__error:empty { display: none; }
+
+/* Granska */
+.review-card .facts { grid-template-columns: 72px 1fr; }
+
+/* Bekräftelse */
+.confirm-title { font-size: 32px; }
+.confirm-img { width: 100%; aspect-ratio: 402 / 220; object-fit: cover; }

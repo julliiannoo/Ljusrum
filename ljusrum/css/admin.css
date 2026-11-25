@@ -1,0 +1,117 @@
+/* =========================================================
+   Admin (/admin) – samma stil som hemsidan, mörkröd header
+   ========================================================= */
+
+.admin { color: var(--ink); }
+
+.admin-header { background: var(--wine); color: var(--btn-text); }
+.admin-header__inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  min-height: 66px; padding: 0 var(--pad);
+}
+@media (min-width: 1024px) { .admin-header__inner { padding: 0 56px; } }
+
+.admin-logo { font-size: 24px; font-weight: 600; color: var(--btn-text); text-decoration: none; }
+.admin-user { display: flex; align-items: center; gap: 12px; font-size: 16px; }
+.badge {
+  background: var(--rose); color: #fefbfb; font-size: 16px;
+  padding: 2px 10px; border-radius: 16px;
+}
+@media (max-width: 599px) { .admin-user__label { display: none; } }
+
+.admin-page { padding: 32px var(--pad) 56px; display: grid; gap: 28px; }
+@media (min-width: 1024px) { .admin-page { padding: 64px 56px 56px; gap: 32px; } }
+
+.eyebrow { color: var(--wine); }
+.eyebrow a { color: var(--wine); text-underline-offset: 3px; }
+.admin-title { font-size: 24px; color: var(--wine); margin-top: 16px; }
+@media (min-width: 600px) { .admin-title { font-size: 32px; margin-top: 24px; } }
+
+/* Val av tillfälle */
+.session-picker { display: grid; gap: 10px; }
+.session-picker label { color: var(--wine); }
+.select {
+  appearance: none; -webkit-appearance: none;
+  width: 100%; min-height: 44px; padding: 8px 40px 8px 12px;
+  font: 16px var(--font); color: var(--ink);
+  background: #a5a8a3 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23252b27' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center;
+  border: 0; border-radius: 10px; cursor: pointer;
+}
+@media (min-width: 600px) { .select { width: 320px; } }
+@media (min-width: 1024px) { .session-picker { justify-items: end; } }
+
+/* Statistik */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+@media (min-width: 600px) { .stats { gap: 16px; } }
+@media (min-width: 1024px) { .stats { gap: 40px; } }
+.stat { background: var(--surface); border-radius: var(--radius); padding: 12px; display: grid; gap: 4px; }
+@media (min-width: 600px) { .stat { padding: 14px 17px; } }
+.stat__label { font-size: 14px; }
+.stat__value { font-size: 20px; font-weight: 600; line-height: 1.2; white-space: nowrap; }
+.stat__unit { font-size: 14px; }
+@media (min-width: 600px) {
+  .stat__label, .stat__unit { font-size: 16px; }
+  .stat__value { font-size: 36px; }
+}
+@media (min-width: 1024px) {
+  .stat { grid-template-columns: 1fr auto; padding: 14px 17px 18px; }
+  .stat__label { grid-column: 1 / -1; font-size: 20px; }
+  .stat__value { font-size: 40px; }
+  .stat__unit { align-self: end; padding-bottom: 8px; }
+}
+
+/* Deltagare */
+.panel { background: var(--surface); border-radius: 10px; padding: 20px 16px 12px; }
+@media (min-width: 600px) { .panel { padding: 24px 28px 16px; } }
+.panel__head { display: grid; gap: 12px; margin-bottom: 16px; }
+@media (min-width: 600px) { .panel__head { grid-template-columns: 1fr auto; align-items: center; } }
+.panel__head h2 { color: var(--ink); }
+.search {
+  width: 100%; min-height: 44px; padding: 8px 12px;
+  font: 16px var(--font); color: var(--ink);
+  background: var(--bg); border: 1px solid transparent; border-radius: 10px;
+}
+.search:focus { border-color: var(--wine); outline: none; }
+@media (min-width: 600px) { .search { width: 300px; } }
+
+.table { width: 100%; border-collapse: collapse; }
+.table th { text-align: left; font-weight: 600; padding: 10px 12px 10px 0; white-space: nowrap; }
+.table td { padding: 12px 12px 12px 0; border-top: 1px solid var(--bg); vertical-align: middle; }
+.table th:last-child, .table td:last-child { text-align: right; padding-right: 0; width: 64px; }
+.table .col-id { width: 140px; }
+@media (min-width: 1024px) { .table th, .table td { font-size: 20px; } .table .col-id { width: 25%; } .table .col-namn { width: 30%; } }
+
+.round-btn {
+  display: inline-grid; place-items: center; width: 44px; height: 44px;
+  border: 1px solid var(--ink); border-radius: 50%;
+  color: var(--ink); text-decoration: none; font-size: 18px;
+}
+.round-btn:hover { background: var(--bg); }
+
+/* Mobil: tabellen visas som en lista med kort */
+@media (max-width: 599px) {
+  .table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .table, .table tbody, .table tr, .table td { display: block; width: 100%; }
+  .table tr {
+    position: relative; padding: 12px 56px 12px 0; border-top: 1px solid var(--bg);
+  }
+  .table td { padding: 0; border: 0; }
+  .table .col-namn { font-weight: 600; }
+  .table .col-id { width: auto; color: var(--muted); font-size: 14px; order: 3; }
+  .table .col-id::before { content: 'Bokning '; }
+  .table tr { display: flex; flex-direction: column; }
+  .table .col-namn { order: 1; } .table .col-epost { order: 2; font-size: 14px; word-break: break-all; }
+  .table td:last-child { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: auto; }
+}
+
+.empty { padding: 16px 0; }
+
+/* Detaljvy */
+.detail { background: var(--surface); border-radius: 10px; padding: 20px 16px; display: grid; gap: 20px; }
+@media (min-width: 600px) { .detail { padding: 24px 28px; } }
+.detail__name { font-size: 20px; font-weight: 600; }
+.detail__mail { font-size: 14px; }
+.detail .facts { grid-template-columns: 100px 1fr; gap: 14px 16px; }
+@media (min-width: 600px) { .detail .facts { grid-template-columns: 200px 1fr; } }
+@media (min-width: 1024px) { .detail .facts { font-size: 20px; grid-template-columns: 260px 1fr; } }
+.status { display: inline-flex; gap: 6px; align-items: center; }
