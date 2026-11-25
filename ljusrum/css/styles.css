@@ -111,11 +111,7 @@ a { color: inherit; }
 }
 .page--narrow { max-width: calc(var(--text) + 2 * var(--pad)); }
 
-.stack > * + * { margin-top: var(--gap); }
-
 .divider { border: 0; border-top: 3px solid var(--wine); margin: 0; }
-/* Linjer i en stack får samma mellanrum ovanför som andra element (24 px) */
-.stack > .divider + *, .stack > * + .divider { margin-top: var(--gap); }
 
 .page-title { text-align: center; }
 .page-title + .divider { margin-top: var(--s3); }
@@ -164,6 +160,10 @@ a { color: inherit; }
 .facts dd { margin: 0; }
 
 .muted { color: var(--muted); }
+
+/* ---------- Stack: jämnt mellanrum (24 px) mellan element ----------
+   Ligger sist så att den vinner över enskilda komponenters margin: 0 */
+.stack > * + * { margin-top: var(--gap); }
 
 /* ---------- Sidfot ---------- */
 .site-footer { color: var(--red); }
