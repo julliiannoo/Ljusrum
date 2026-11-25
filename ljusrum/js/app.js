@@ -160,7 +160,7 @@ const views = {
             <legend>Välj ett tillfälle</legend>
             ${options}
           </fieldset>
-          <div class="selected-time" id="selected-time" aria-live="polite"></div>
+          <p class="selected-time" id="selected-time">Ingen tid vald än. Välj ett tillfälle ovan för att gå vidare.</p>
           <button class="btn" type="submit" id="to-details">Gå vidare till bokning</button>
         </form>
         ${backLink('#/')}
@@ -172,13 +172,10 @@ const views = {
         const btn = document.getElementById('to-details');
         const update = () => {
           const s = getSession(getDraft().session);
-          if (s) {
-            out.innerHTML = `<strong>Vald tid</strong>${s.label}, <span class="nowrap">${W.time}</span>`;
-            btn.disabled = false;
-          } else {
-            out.textContent = 'Ingen tid vald än. Välj ett tillfälle ovan för att gå vidare.';
-            btn.disabled = true;
-          }
+          // Det valda kortet visar redan vilken tid som är vald, så hjälptexten
+          // visas bara när ingen tid är vald (och förklarar varför knappen är grå).
+          out.hidden = !!s;
+          btn.disabled = !s;
         };
         form.addEventListener('change', (e) => {
           if (e.target.name === 'tillfalle') { setDraft({ session: e.target.value }); update(); }
