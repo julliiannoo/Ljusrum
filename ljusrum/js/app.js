@@ -161,7 +161,7 @@ const views = {
             ${options}
           </fieldset>
           <p class="selected-time" id="selected-time">Ingen tid vald än. Välj ett tillfälle ovan för att gå vidare.</p>
-          <button class="btn" type="submit" id="to-details">Gå vidare till bokning</button>
+          <button class="btn btn--compact" type="submit" id="to-details">Gå vidare till bokning</button>
         </form>
         ${backLink('#/')}
         ${footer()}
@@ -219,7 +219,7 @@ const views = {
             <p class="field__hint" id="epost-hint">Hit skickar vi bekräftelse och faktura.</p>
             <p class="field__error" id="epost-fel"></p>
           </div>
-          <button class="btn" type="submit">Granska bokning</button>
+          <button class="btn btn--compact" type="submit">Granska bokning</button>
         </form>
         ${backLink('#/boka')}
         ${footer()}
@@ -285,7 +285,7 @@ const views = {
         </section>
         <p>Ingen betalning sker nu. Fakturan skickas till din e-post efter bokningen.</p>
         <p class="field__error" id="book-error" role="alert"></p>
-        <button class="btn" type="button" id="confirm">Bekräfta bokning</button>
+        <button class="btn btn--compact" type="button" id="confirm">Bekräfta bokning</button>
         ${backLink('#/uppgifter')}
         ${footer()}
       </div>`,
