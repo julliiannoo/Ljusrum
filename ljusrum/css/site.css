@@ -3,10 +3,12 @@
    ========================================================= */
 
 /* ---------- Startsida: hero ---------- */
-.hero { display: grid; gap: 24px; }
+.hero { display: grid; gap: var(--s3); }
 .hero__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .hero__title { font-size: 32px; }
-.hero__sub { margin-top: 8px; }
+.hero__sub { margin-top: var(--s1); }
+.hero__facts { margin-top: var(--s2); font-weight: 600; }
+@media (min-width: 1024px) { .hero__facts { margin-top: 0; } }
 .hero__map { width: 114px; flex-shrink: 0; }
 .hero__img { width: 100%; aspect-ratio: 402 / 213; object-fit: cover; border-radius: 2px; }
 
@@ -15,10 +17,11 @@
 }
 @media (min-width: 1024px) {
   .hero {
-    grid-template-columns: 1fr 480px; align-items: center; gap: 64px;
-    padding: 16px 0 24px;
+    grid-template-columns: 1fr 480px; align-items: center; gap: var(--s4);
+    padding: var(--s3) 0 var(--s4);
   }
-  .hero__text { display: grid; gap: 28px; align-content: center; }
+  .hero__text { display: grid; gap: var(--s3); align-content: center; }
+  .hero__facts { font-size: 18px; }
   .hero__title { font-size: 44px; }
   .hero__sub { font-size: 20px; }
   .hero__img { aspect-ratio: 3 / 2; }
@@ -30,35 +33,37 @@
 }
 
 /* ---------- Startsida: sektioner ---------- */
-.section { padding: 24px 0; border-top: 3px solid var(--wine); }
-.section:first-of-type { margin-top: 24px; }
-.section h2 { margin-bottom: 16px; }
+.section { padding: var(--s3) 0; border-top: 3px solid var(--wine); }
+.section:first-of-type { margin-top: var(--s3); }
+.section h2 { margin-bottom: var(--s2); }
+@media (min-width: 1024px) { .section { padding: var(--s4) 0; } }
 
 .intro { max-width: 700px; }
-.intro__more { display: flex; justify-content: flex-end; margin-top: 12px; }
+.intro__more { display: flex; justify-content: flex-start; margin-top: var(--s2); }
 
-.split {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;
-}
+/* Mobil: bilden ovanför texten så att texten får full bredd */
+.split { display: grid; gap: var(--s2); }
 .split img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-.split--reverse .split__media { order: -1; }
-
+.split__media { order: -1; }
 @media (min-width: 600px) {
-  .split { grid-template-columns: 1fr 320px; gap: 32px; }
-  .split--reverse { grid-template-columns: 320px 1fr; }
+  .split { grid-template-columns: 1fr 320px; gap: var(--s3); align-items: center; }
+  .split__media { order: 0; }
+  .split--reverse .split__media { order: -1; }
 }
+
+@media (min-width: 600px) { .split--reverse { grid-template-columns: 320px 1fr; } }
 @media (min-width: 1024px) {
-  .split { grid-template-columns: 1fr 480px; gap: 64px; }
-  .split--reverse { grid-template-columns: 480px 1fr; }
+  .split { grid-template-columns: 1fr 360px; gap: var(--s4); }
+  .split--reverse { grid-template-columns: 360px 1fr; }
 }
 
 .date-list { margin: 0; padding-left: 22px; }
 .date-list li + li { margin-top: 8px; }
 
-.section .btn { margin-top: 24px; }
+.section .btn { margin-top: var(--s3); }
 @media (min-width: 1024px) { .section .btn { max-width: 360px; } }
 
-.footer-wrap { border-top: 3px solid var(--wine); padding-top: 24px; margin-top: 8px; }
+.footer-wrap { border-top: 3px solid var(--wine); padding-top: var(--s3); }
 
 /* ---------- Mer om kursen ---------- */
 .prose p + p { margin-top: 16px; }
@@ -71,7 +76,7 @@
 
 /* Tidsval: riktiga radioknappar som ser ut som kort */
 .picker { border: 0; padding: 0; margin: 0; display: grid; gap: 12px; }
-.picker legend { font-size: 20px; font-weight: 600; margin-bottom: 12px; padding: 0; }
+.picker legend { font-size: 20px; font-weight: 600; margin-bottom: var(--s2); padding: 0; }
 
 .option {
   position: relative; display: flex; align-items: center; gap: 14px;

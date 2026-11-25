@@ -19,8 +19,8 @@
 }
 @media (max-width: 599px) { .admin-user__label { display: none; } }
 
-.admin-page { padding: 32px var(--pad) 56px; display: grid; gap: 28px; }
-@media (min-width: 1024px) { .admin-page { padding: 64px 56px 56px; gap: 32px; } }
+.admin-page { padding: var(--s3) var(--pad) var(--s4); display: grid; gap: var(--s3); }
+@media (min-width: 1024px) { .admin-page { padding: var(--s4) 56px; gap: var(--s3); } }
 
 .eyebrow { color: var(--wine); }
 .eyebrow a { color: var(--wine); text-underline-offset: 3px; }
@@ -43,7 +43,7 @@
 /* Statistik */
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 @media (min-width: 600px) { .stats { gap: 16px; } }
-@media (min-width: 1024px) { .stats { gap: 40px; } }
+@media (min-width: 1024px) { .stats { gap: var(--s3); } }
 .stat { background: var(--surface); border-radius: var(--radius); padding: 12px; display: grid; gap: 4px; }
 @media (min-width: 600px) { .stat { padding: 14px 17px; } }
 .stat__label { font-size: 14px; }

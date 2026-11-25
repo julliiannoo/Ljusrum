@@ -47,6 +47,7 @@ const views = {
               </div>
               <img class="hero__map" src="images/karta.png" alt="" width="114" height="78">
             </div>
+            <p class="hero__facts">Lördagar i november · <span class="nowrap">kl. 10–15</span> · <span class="nowrap">1 200 kr</span> · <span class="nowrap">max 10 deltagare</span></p>
             <a class="btn hero__cta-desktop" href="#/boka">Välj tid och boka</a>
           </div>
           <img class="hero__img" src="images/hero.jpg" alt="Person som håller upp en systemkamera framför ansiktet" width="1206" height="639">
@@ -65,7 +66,7 @@ const views = {
         <section class="section split" aria-labelledby="h-niva">
           <div>
             <h2 id="h-niva">Kunskapsnivå</h2>
-            <p>Passar dig som är nybörjare. Inga tidigare fotokunskaper behövs.</p>
+            <p>Passar dig som är nybörjare. Inga tidigare fotokunskaper behövs – vi går igenom kamerans inställningar steg för steg.</p>
           </div>
           <div class="split__media"><img src="images/kunskapsniva.jpg" alt="Person i röd mössa som fotograferar utomhus" loading="lazy" width="780" height="520"></div>
         </section>
@@ -73,7 +74,7 @@ const views = {
         <section class="section split split--reverse" aria-labelledby="h-kamera">
           <div>
             <h2 id="h-kamera">Kamerakrav</h2>
-            <p>Egen kamera där du kan ställa in bländare, slutartid och ISO. Mobilkamera räcker inte.</p>
+            <p>Egen kamera där du kan ställa in bländare, slutartid och ISO. Mobilkamera räcker inte. Osäker på din kamera? Mejla oss modellen så svarar vi.</p>
           </div>
           <div class="split__media"><img src="images/kamerakrav.jpg" alt="Systemkamera på en randig filt" loading="lazy" width="480" height="320"></div>
         </section>
