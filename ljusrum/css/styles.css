@@ -93,7 +93,7 @@ a { color: inherit; }
 .site-header__inner {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   min-height: 70px; padding: 0 var(--pad);
-  max-width: calc(var(--content) + 2 * var(--pad)); margin: 0 auto;
+  max-width: calc(var(--text) + 2 * var(--pad)); margin: 0 auto; /* samma bredd som sidinnehållet */
 }
 .logo {
   font-size: 24px; font-weight: 600; color: var(--ink); text-decoration: none;
