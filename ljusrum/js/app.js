@@ -98,7 +98,7 @@ const views = {
           <p style="margin-top:16px">Ta kontroll över din kamera är en workshop för dig som vill lära dig fotografera manuellt.
           Dagen består av korta genomgångar och praktiska övningar, inne i studion och utomhus i närheten.
           Du övar på bländare, slutartid, ISO, fokus, ljus och komposition.</p>
-          <dl class="facts" style="margin-top:16px">
+          <dl class="facts facts--values" style="margin-top:16px">
             <dt>Tid</dt><dd>Kl. 10–15</dd>
             <dt>Plats</dt><dd>Ljusrum fotostudio på Södermalm, Stockholm, och utomhus i närheten</dd>
             <dt>Pris</dt><dd>1 200 kr inkl. moms. Faktura skickas via e-post efter bokningen.</dd>
