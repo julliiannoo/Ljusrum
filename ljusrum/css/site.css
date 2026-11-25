@@ -64,6 +64,8 @@
 
 /* ---------- Mer om kursen ---------- */
 .prose p + p { margin-top: 16px; }
+/* Underrubrik i löptext, t.ex. "Ta med" och "Klädsel" */
+.subhead { font-size: 18px; font-weight: 600; margin-top: var(--s3); }
 .wide-img { width: 100%; aspect-ratio: 402 / 213; object-fit: cover; }
 /* Ingår / ingår inte: ✓ och ✕ i stället för punkter */
 .include-list { margin: var(--s2) 0 0; padding: 0; list-style: none; }
