@@ -127,5 +127,4 @@
 .review-card .facts { grid-template-columns: 72px 1fr; }
 
 /* Bekräftelse */
-.confirm-title { font-size: 32px; }
 .confirm-img { width: 100%; aspect-ratio: 402 / 220; object-fit: cover; }
