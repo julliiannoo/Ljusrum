@@ -119,9 +119,9 @@ const views = {
         <section aria-labelledby="h-krav">
           <h2 id="h-krav">Kunskapsnivå och kamerakrav</h2>
           <p style="margin-top:16px">Inga tidigare fotokunskaper behövs.</p>
-          <p style="margin-top:16px"><strong>Ta med:</strong> Egen kamera där du kan ställa in bländare, slutartid och ISO,
+          <p style="margin-top:16px"><strong>Ta med</strong> Egen kamera där du kan ställa in bländare, slutartid och ISO,
           laddat batteri och minneskort. Mobilkamera räcker inte. Extra objektiv och stativ behövs inte.</p>
-          <p style="margin-top:16px"><strong>Klädsel:</strong> Kläder efter väder – en del av dagen är vi ute.</p>
+          <p style="margin-top:16px"><strong>Klädsel</strong> Kläder efter väder – en del av dagen är vi ute.</p>
         </section>
         <img class="wide-img" src="images/om-kursen-2.jpg" alt="Närbild på en systemkamera med motljusskydd" loading="lazy" width="1206" height="639">
         <hr class="divider">
