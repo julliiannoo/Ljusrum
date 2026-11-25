@@ -33,7 +33,7 @@
 }
 
 /* ---------- Startsida: sektioner ---------- */
-.section { padding: var(--s3) 0; border-top: 3px solid var(--wine); }
+.section { padding: var(--s3) 0; border-top: 1px solid var(--wine); }
 .section:first-of-type { margin-top: var(--s3); }
 .section h2 { margin-bottom: var(--s2); }
 @media (min-width: 1024px) { .section { padding: var(--s4) 0; } }
@@ -63,7 +63,7 @@
 .section .btn { margin-top: var(--s3); }
 @media (min-width: 1024px) { .section .btn { max-width: 360px; } }
 
-.footer-wrap { border-top: 3px solid var(--wine); padding-top: var(--s3); }
+.footer-wrap { border-top: 1px solid var(--wine); padding-top: var(--s3); }
 
 /* ---------- Mer om kursen ---------- */
 .prose p + p { margin-top: 16px; }

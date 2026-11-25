@@ -111,7 +111,7 @@ a { color: inherit; }
 }
 .page--narrow { max-width: calc(var(--text) + 2 * var(--pad)); }
 
-.divider { border: 0; border-top: 3px solid var(--wine); margin: 0; }
+.divider { border: 0; border-top: 1px solid var(--wine); margin: 0; }
 
 .page-title { text-align: center; }
 .page-title + .divider { margin-top: var(--s3); }
