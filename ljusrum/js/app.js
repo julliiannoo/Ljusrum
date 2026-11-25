@@ -108,12 +108,12 @@ const views = {
         <img class="wide-img" src="images/om-kursen-1.jpg" alt="Två personer tittar glatt på en bild i kamerans skärm" loading="lazy" width="1206" height="639">
         <section aria-labelledby="h-ingar">
           <h2 id="h-ingar">Detta ingår i kursen</h2>
-          <ul class="check-list" style="margin-top:16px">
-            <li>Handledning under hela dagen</li>
-            <li>Övningsmaterial</li>
-            <li>Fika</li>
+          <ul class="include-list">
+            <li><span class="include-list__icon" aria-hidden="true">✓</span>Handledning under hela dagen</li>
+            <li><span class="include-list__icon" aria-hidden="true">✓</span>Övningsmaterial</li>
+            <li><span class="include-list__icon" aria-hidden="true">✓</span>Fika</li>
+            <li class="include-list__no"><span class="include-list__icon" aria-hidden="true">✕</span>Lunch ingår inte</li>
           </ul>
-          <p>Lunch ingår inte.</p>
         </section>
         <hr class="divider">
         <section aria-labelledby="h-krav">
