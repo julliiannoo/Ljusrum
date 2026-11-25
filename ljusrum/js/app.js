@@ -44,10 +44,10 @@ const views = {
               <h1 class="hero__title" tabindex="-1">Ta kontroll över <br class="br-desktop">din kamera</h1>
               <p class="hero__sub">En fotokurs för nybörjare i Stockholm</p>
             </div>
-            <a class="btn hero__cta-desktop" href="#/boka">Välj tid och boka</a>
+            <a class="btn btn--compact hero__cta-desktop" href="#/boka">Välj tid och boka</a>
           </div>
           <img class="hero__img" src="images/hero.jpg" alt="Person som håller upp en systemkamera framför ansiktet" width="1206" height="639">
-          <a class="btn hero__cta-mobile" href="#/boka">Välj tid och boka</a>
+          <a class="btn btn--compact hero__cta-mobile" href="#/boka">Välj tid och boka</a>
         </div>
 
         <section class="section" aria-labelledby="h-kort">
@@ -78,7 +78,7 @@ const views = {
         <section class="section" aria-labelledby="h-tider">
           <h2 id="h-tider">Lediga tider i närtid</h2>
           <ul class="date-list">${dateList()}</ul>
-          <a class="btn" href="#/boka">Välj tid och boka</a>
+          <a class="btn btn--compact" href="#/boka">Välj tid och boka</a>
         </section>
 
         ${footer()}
@@ -126,7 +126,7 @@ const views = {
         <img class="wide-img" src="images/om-kursen-2.jpg" alt="Närbild på en systemkamera med motljusskydd" loading="lazy" width="1206" height="639">
         <hr class="divider">
         <h2>Låter detta som något för dig?</h2>
-        <a class="btn" href="#/boka">Välj tid och boka</a>
+        <a class="btn btn--compact" href="#/boka">Välj tid och boka</a>
         ${backLink('#/')}
         ${footer()}
       </div>`,
