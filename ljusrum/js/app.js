@@ -37,7 +37,7 @@ const views = {
     return {
       title: 'Ta kontroll över din kamera – fotokurs för nybörjare | Ljusrum',
       html: `
-      <div class="page">
+      <div class="page page--narrow">
         <div class="hero">
           <div class="hero__text">
             <div class="hero__head">
