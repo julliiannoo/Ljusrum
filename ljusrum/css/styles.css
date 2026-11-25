@@ -163,6 +163,9 @@ a { color: inherit; }
 .facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; }
 .facts dt { font-weight: 600; }
 .facts dd { margin: 0; }
+/* Variant där uppgifterna framhävs och etiketterna tonas ner (t.ex. bokningsbekräftelsen) */
+.facts--values dt { font-weight: 300; }
+.facts--values dd { font-weight: 600; }
 
 .muted { color: var(--muted); }
 

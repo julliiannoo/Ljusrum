@@ -315,7 +315,7 @@ const views = {
       html: `
       <div class="page page--narrow stack">
         ${pageHead('✓ Din plats är bokad!')}
-        <dl class="facts">
+        <dl class="facts facts--values">
           <dt>Bokning</dt><dd>${b.id}</dd>
           <dt>Namn</dt><dd>${esc(b.name)}</dd>
           <dt>Datum</dt><dd>${s.label}, <span class="nowrap">${W.time}</span></dd>
@@ -323,7 +323,10 @@ const views = {
           <dt>Pris</dt><dd>${formatPrice(W.price)} inkl. moms</dd>
           <dt>Faktura</dt><dd>${esc(b.email)}</dd>
         </dl>
-        <p><strong>Ta med</strong> Egen kamera där du kan ställa in bländare, slutartid och ISO, laddat batteri och minneskort. Kläder efter väder.</p>
+        <section aria-labelledby="h-tamed">
+          <h2 id="h-tamed">Ta med</h2>
+          <p style="margin-top:8px">Egen kamera där du kan ställa in bländare, slutartid och ISO, laddat batteri och minneskort. Kläder efter väder.</p>
+        </section>
         <p>En bekräftelse och fakturan skickas till din e-post. Ingen betalning görs på webbplatsen.</p>
         <img class="confirm-img" src="images/bekraftelse.jpg" alt="Systemkamera bland höstlöv" width="720" height="400">
         <a class="btn-secondary btn-secondary--full" href="#/">← Tillbaka till startsidan</a>
