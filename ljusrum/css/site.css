@@ -106,8 +106,7 @@
 .option:has(input:checked) .option__badge { display: inline; }
 .option.is-full { opacity: 0.6; cursor: not-allowed; }
 
-.selected-time { min-height: 52px; }
-.selected-time strong { display: block; font-size: 20px; }
+
 
 /* Formulär */
 .field { display: grid; gap: 8px; }
