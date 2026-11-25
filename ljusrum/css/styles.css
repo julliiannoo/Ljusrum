@@ -2,7 +2,8 @@
    Ljusrum – stil
    Visuell stil: Genuin, trygg och inspirerande
    Typsnitt: Inter. Rubrik 32 Bold, Underrubrik 20 Semi Bold,
-   Brödtext 16 Regular, Sekundära knappar 16 Light, Primär knapp 24 Bold.
+   Brödtext 16 Regular, Sekundära knappar 16 Light, Primär knapp 18 Bold.
+   Avstånd: 8 / 16 / 24 / 48 px.
    Rundade hörn: 8 px.
    Brytpunkter: mobil < 600 px, tablet 600–1023 px, desktop ≥ 1024 px
    ========================================================= */
@@ -33,10 +34,17 @@
   --text: 720px;            /* maxbredd för textspalter */
   --gap: 24px;
 
+  /* Avståndsskala: 8 / 16 / 24 / 48 */
+  --s1: 8px;
+  --s2: 16px;
+  --s3: 24px;
+  --s4: 48px;
+
   --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 @media (min-width: 600px) { :root { --pad: 48px; } }
+@media (min-width: 1024px) { h2 { font-size: 24px; } }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -108,13 +116,13 @@ a { color: inherit; }
 .divider { border: 0; border-top: 3px solid var(--wine); margin: 0; }
 
 .page-title { text-align: center; }
-.page-title + .divider { margin-top: 20px; }
+.page-title + .divider { margin-top: var(--s3); }
 
 /* ---------- Knappar ---------- */
 .btn {
   display: flex; align-items: center; justify-content: center;
   width: 100%; min-height: 52px; padding: 10px 20px;
-  font: 700 20px/1.2 var(--font);
+  font: 700 18px/1.2 var(--font);
   color: var(--btn-text); background: var(--btn);
   border: 0; border-radius: var(--radius);
   text-decoration: none; cursor: pointer;
@@ -124,7 +132,6 @@ a { color: inherit; }
 .btn:disabled, .btn[aria-disabled='true'] {
   background: var(--disabled); color: var(--disabled-text); cursor: not-allowed;
 }
-@media (min-width: 600px) { .btn { font-size: 24px; } }
 
 .btn-secondary {
   display: inline-flex; align-items: center; justify-content: center; gap: 6px;
