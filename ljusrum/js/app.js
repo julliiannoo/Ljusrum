@@ -314,18 +314,16 @@ const views = {
       title: 'Bokningsbekräftelse | Ljusrum',
       html: `
       <div class="page page--narrow stack">
-        <p class="page-title" style="font-size:24px;font-weight:700">Bokningsbekräftelse</p>
-        <hr class="divider">
-        <h1 class="confirm-title" tabindex="-1">✓ Din plats är bokad!</h1>
+        ${pageHead('✓ Din plats är bokad!')}
         <dl class="facts">
-          <dt>Bokning:</dt><dd>${b.id}</dd>
-          <dt>Namn:</dt><dd>${esc(b.name)}</dd>
-          <dt>Datum:</dt><dd>${s.label}, <span class="nowrap">${W.time}</span></dd>
-          <dt>Plats:</dt><dd>${W.place}</dd>
-          <dt>Pris:</dt><dd>${formatPrice(W.price)} inkl. moms</dd>
-          <dt>Faktura:</dt><dd>${esc(b.email)}</dd>
+          <dt>Bokning</dt><dd>${b.id}</dd>
+          <dt>Namn</dt><dd>${esc(b.name)}</dd>
+          <dt>Datum</dt><dd>${s.label}, <span class="nowrap">${W.time}</span></dd>
+          <dt>Plats</dt><dd>${W.place}</dd>
+          <dt>Pris</dt><dd>${formatPrice(W.price)} inkl. moms</dd>
+          <dt>Faktura</dt><dd>${esc(b.email)}</dd>
         </dl>
-        <p><strong>Ta med:</strong> Egen kamera där du kan ställa in bländare, slutartid och ISO, laddat batteri och minneskort. Kläder efter väder.</p>
+        <p><strong>Ta med</strong> Egen kamera där du kan ställa in bländare, slutartid och ISO, laddat batteri och minneskort. Kläder efter väder.</p>
         <p>En bekräftelse och fakturan skickas till din e-post. Ingen betalning görs på webbplatsen.</p>
         <img class="confirm-img" src="images/bekraftelse.jpg" alt="Systemkamera bland höstlöv" width="720" height="400">
         <a class="btn-secondary btn-secondary--full" href="#/">← Tillbaka till startsidan</a>
