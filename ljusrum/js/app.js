@@ -329,7 +329,7 @@ const views = {
         </section>
         <p>En bekräftelse och fakturan skickas till din e-post. Ingen betalning görs på webbplatsen.</p>
         <img class="confirm-img" src="images/bekraftelse.jpg" alt="Systemkamera bland höstlöv" width="720" height="400">
-        <a class="btn-secondary btn-secondary--full" href="#/">← Tillbaka till startsidan</a>
+        ${backLink('#/', '← Tillbaka till startsidan')}
         ${footer()}
       </div>`,
     };
