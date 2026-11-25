@@ -65,8 +65,12 @@
 /* ---------- Mer om kursen ---------- */
 .prose p + p { margin-top: 16px; }
 .wide-img { width: 100%; aspect-ratio: 402 / 213; object-fit: cover; }
-.check-list { margin: 0; padding-left: 0; list-style: none; }
-.check-list li::before { content: '• '; }
+/* Ingår / ingår inte: ✓ och ✕ i stället för punkter */
+.include-list { margin: var(--s2) 0 0; padding: 0; list-style: none; }
+.include-list li { display: flex; gap: 10px; }
+.include-list li + li { margin-top: 4px; }
+.include-list__icon { width: 1.1em; flex-shrink: 0; font-weight: 600; }
+.include-list__no { margin-top: var(--s2) !important; }
 
 /* ---------- Bokningsflöde ---------- */
 .step { font-size: 14px; color: var(--muted); text-align: center; margin-top: 6px; }
