@@ -80,7 +80,7 @@ const views = {
         </section>
 
         <section class="section" aria-labelledby="h-tider">
-          <h2 id="h-tider">Lediga tider i närtid:</h2>
+          <h2 id="h-tider">Lediga tider i närtid</h2>
           <ul class="date-list">${dateList()}</ul>
           <a class="btn" href="#/boka">Välj tid och boka</a>
         </section>
@@ -111,7 +111,7 @@ const views = {
         </section>
         <img class="wide-img" src="images/om-kursen-1.jpg" alt="Två personer tittar glatt på en bild i kamerans skärm" loading="lazy" width="1206" height="639">
         <section aria-labelledby="h-ingar">
-          <h2 id="h-ingar">Detta ingår i kursen:</h2>
+          <h2 id="h-ingar">Detta ingår i kursen</h2>
           <ul class="check-list" style="margin-top:16px">
             <li>Handledning under hela dagen</li>
             <li>Övningsmaterial</li>
@@ -121,7 +121,7 @@ const views = {
         </section>
         <hr class="divider">
         <section aria-labelledby="h-krav">
-          <h2 id="h-krav">Kunskapsnivå och kamerakrav:</h2>
+          <h2 id="h-krav">Kunskapsnivå och kamerakrav</h2>
           <p style="margin-top:16px">Inga tidigare fotokunskaper behövs.</p>
           <p style="margin-top:16px"><strong>Ta med:</strong> Egen kamera där du kan ställa in bländare, slutartid och ISO,
           laddat batteri och minneskort. Mobilkamera räcker inte. Extra objektiv och stativ behövs inte.</p>
@@ -161,7 +161,7 @@ const views = {
         ${pageHead('Välj en tid')}
         <form id="time-form" class="stack" novalidate>
           <fieldset class="picker">
-            <legend>Välj ett tillfälle:</legend>
+            <legend>Välj ett tillfälle</legend>
             ${options}
           </fieldset>
           <div class="selected-time" id="selected-time" aria-live="polite"></div>
@@ -177,7 +177,7 @@ const views = {
         const update = () => {
           const s = getSession(getDraft().session);
           if (s) {
-            out.innerHTML = `<strong>Vald tid:</strong>${s.label}, <span class="nowrap">${W.time}</span>`;
+            out.innerHTML = `<strong>Vald tid</strong>${s.label}, <span class="nowrap">${W.time}</span>`;
             btn.disabled = false;
           } else {
             out.textContent = 'Ingen tid vald än. Välj ett tillfälle ovan för att gå vidare.';
@@ -207,7 +207,7 @@ const views = {
       <div class="page page--narrow stack">
         ${pageHead('Fyll i dina uppgifter')}
         <div>
-          <h2>Din valda tid:</h2>
+          <h2>Din valda tid</h2>
           <p style="margin-top:8px">${s.label}, <span class="nowrap">${W.time}</span></p>
           <p>${W.placeShort} · ${formatPrice(W.price)} inkl. moms</p>
           <a class="text-link" href="#/boka">← Ändra tid</a>
