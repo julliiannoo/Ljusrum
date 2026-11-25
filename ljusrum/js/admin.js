@@ -116,7 +116,7 @@ function detail(state) {
         <dt>Status</dt><dd><span class="status"><span aria-hidden="true">✓</span> ${b.status}</span></dd>
       </dl>
     </section>
-    <a class="btn-secondary btn-secondary--full" href="${back}">← Tillbaka till bokningsöversikt</a>`;
+    <div><a class="text-link" href="${back}">← Tillbaka till bokningsöversikt</a></div>`;
 }
 
 /* ---------- Router ---------- */
