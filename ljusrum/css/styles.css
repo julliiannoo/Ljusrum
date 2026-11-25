@@ -26,6 +26,7 @@
   --disabled-text: #5f645f;
   --muted: #55635a;
   --line: rgba(74, 29, 32, 0.35);
+  --divider: rgba(74, 29, 32, 0.5); /* sidoavdelare: vinrött 50 % genomskinligt */
 
   /* Form och avstånd */
   --radius: 8px;
@@ -111,7 +112,7 @@ a { color: inherit; }
 }
 .page--narrow { max-width: calc(var(--text) + 2 * var(--pad)); }
 
-.divider { border: 0; border-top: 1px solid var(--wine); margin: 0; }
+.divider { border: 0; border-top: 1px solid var(--divider); margin: 0; }
 
 .page-title { text-align: center; }
 .page-title + .divider { margin-top: var(--s3); }
