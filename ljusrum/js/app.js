@@ -59,7 +59,7 @@ const views = {
             <h2 id="h-kort">Kort om kursen</h2>
             <p>En heldag för vuxna nybörjare som vill komma vidare från autoläget på din kamera.
             Vi varvar korta genomgångar med praktiska fotoövningar, både i studion och ute på Södermalm.</p>
-            <div class="intro__more"><a class="btn-secondary" href="#/om-kursen">Läs mer om kursen →</a></div>
+            <div class="intro__more"><a class="text-link" href="#/om-kursen">Läs mer om kursen →</a></div>
           </div>
         </section>
 
